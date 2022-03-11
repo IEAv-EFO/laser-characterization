@@ -7,4 +7,7 @@ The communication is made via GPIB.
 The current and temperature controller used is the LDC 3722B,
 the optical spectrometer used is the Advantest Q8347.
 
+To check the complete description refer to the <a href="Laser_diode_characterization_paper.pdf">Project Paper.</a>
+
+
 Obs: The problematic device in this system is the optical spectrometer, because I couldn't made the embbeded function of wait the measurement to finish before request the data via GPIB to work. So, I implemented a simple function by monitoring the spectrometer status byte. If any errors occurs, this is most likely the cause.
