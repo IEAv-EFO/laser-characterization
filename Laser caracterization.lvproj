@@ -281,10 +281,22 @@
 				<Item Name="ex_FileFormats.ctl" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ExFile.llb/ex_FileFormats.ctl"/>
 				<Item Name="ex_subFileWrite.vi" Type="VI" URL="/&lt;vilib&gt;/express/express output/ExFileWriteBlock.llb/ex_subFileWrite.vi"/>
 				<Item Name="Is Path and Not Empty.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/file.llb/Is Path and Not Empty.vi"/>
+				<Item Name="High Resolution Relative Seconds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/High Resolution Relative Seconds.vi"/>
+				<Item Name="Beep.vi" Type="VI" URL="/&lt;vilib&gt;/Platform/system.llb/Beep.vi"/>
 			</Item>
 			<Item Name="lvStorage.dll" Type="Document" URL="lvStorage.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="Config Controller.vi" Type="VI" URL="../Config Controller.vi"/>
+			<Item Name="Config Spectrometer.vi" Type="VI" URL="../Config Spectrometer.vi"/>
+			<Item Name="hora min seg.vi" Type="VI" URL="../hora min seg.vi"/>
+			<Item Name="Read Spectrum and Save It_OK.vi" Type="VI" URL="../Read Spectrum and Save It_OK.vi"/>
+			<Item Name="save_metadata.vi" Type="VI" URL="../save_metadata.vi"/>
+			<Item Name="filename.vi" Type="VI" URL="../filename.vi"/>
+			<Item Name="End Sound.vi" Type="VI" URL="../End Sound.vi"/>
+			<Item Name="Wait for spectrometer_v2.vi" Type="VI" URL="../Wait for spectrometer_v2.vi"/>
+			<Item Name="Read Y.vi" Type="VI" URL="../Read Y.vi"/>
+			<Item Name="Read X.vi" Type="VI" URL="../Read X.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
