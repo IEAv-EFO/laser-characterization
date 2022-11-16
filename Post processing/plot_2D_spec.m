@@ -14,11 +14,14 @@ height = 7; % cm
 disp('Choose the file path where the waveforms are:')
 selpath = uigetdir
 while selpath == 0
-    selpath = uigetdir  % wait path selection by user
+    selpath = uigetdir;  % wait path selection by user
 end
 cd(selpath)
 
 files = dir('*.lvm');
+if length(files)<=0
+    disp('No .lvm files were found in this directory')
+end
 files = struct2table(files);
 files = files(:,1);
 files = table2array(files);
