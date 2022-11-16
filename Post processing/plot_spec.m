@@ -12,7 +12,7 @@ initial_path = pwd;
 path = uigetdir();
 cd(path)
 file_pattern = 'data ';
-% file_pattern = 'LabVIEW Data ';
+
 extension = ' .lvm';
 N = length(dir([file_pattern, '*']));
 tic
@@ -36,8 +36,7 @@ for i=1:N
     wave(:,i) = [tmp(2); tmp(9:2:end)];      % m     
     current(:,i) = tmp(3);                   % mA
 end
-%%
-close all
+%% 2D plot
 figure
 hold on
     plot(wave, power,'color',[.6 .6 .6])
@@ -49,7 +48,7 @@ hold on
         legend([h1, h2], leg1, leg2)
         xlabel('Wavelength [m]','interpreter','latex','FontSize',12)
         ylabel('Optical power [dBm/nm]','interpreter','latex','FontSize',12)
-%%    
+%% 3D plot   
 figure('Units','centimeter','Position',[10 10 30 12],'PaperPositionMode','auto')
     X = squeeze(wave);
     Y = squeeze(power);
