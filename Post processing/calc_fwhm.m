@@ -16,10 +16,13 @@ end
 % find first point
 [ind1, pow1] = find(y >= mid, 1, 'first');
 
-% interpolate if not exact match
+% interpolate if this is not the exact match
 if pow1 ~= mid
     ind1_1 = ind1-1;
-    
+    if ind1_1 == 0
+        ind1_1 = 1;
+    end
+
     xx = [x(ind1) x(ind1_1)];
     yy = [y(ind1) y(ind1_1)];
     c = [[1; 1]  xx(:)] \yy(:);
@@ -36,6 +39,9 @@ end
 
 if pow2 ~= mid
     ind2_1 = ind2+1;
+    if ind2_1 > length(y)
+        ind2_1 = length(y);
+    end
 
     xx = [x(ind2) x(ind2_1)];
     yy = [y(ind2) y(ind2_1)];

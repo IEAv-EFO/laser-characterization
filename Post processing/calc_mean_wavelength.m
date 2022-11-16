@@ -1,4 +1,4 @@
-function mean_wav = calc_mean_wav(lamb, power, db)
+function mean_wav = calc_mean_wavelength(lamb, power, db)
 % Function to calculate the mean Wavelength of an spectrum.
 %
 % mean_wav = calc_mean_wav(lamb,power)
