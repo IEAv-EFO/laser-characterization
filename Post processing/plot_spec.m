@@ -11,9 +11,9 @@ pumpkin = [211, 84, 0]/255;
 initial_path = pwd;
 path = uigetdir();
 cd(path)
-file_pattern = 'data ';
+file_pattern = 'data';
 
-extension = ' .lvm';
+extension = '.lvm';
 N = length(dir([file_pattern, '*']));
 tic
 
@@ -47,7 +47,10 @@ hold on
         leg2 = sprintf('%.0f mA', current(1,end));
         legend([h1, h2], leg1, leg2)
         xlabel('Wavelength [m]','interpreter','latex','FontSize',12)
-        ylabel('Optical power [dBm/nm]','interpreter','latex','FontSize',12)
+        ylabel('Optical power [dBm]','interpreter','latex','FontSize',12)
+
+saveas(figure(1),'2d_plot.png')
+
 %% 3D plot   
 figure('Units','centimeter','Position',[10 10 30 12],'PaperPositionMode','auto')
     X = squeeze(wave);
