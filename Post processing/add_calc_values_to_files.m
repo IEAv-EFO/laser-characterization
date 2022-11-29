@@ -36,6 +36,7 @@ for i = 1:length(acq)
     bw_array = zeros(n,1);
     bw_int_array = zeros(n,1);
     mean_wav_array = zeros(n,1);
+    current = zeros(n,1);
 
     % for loop to access each spectrum
     for j = 1:n
@@ -48,7 +49,8 @@ for i = 1:length(acq)
         power = [tmp(1); tmp(8:2:end)];
         wave = [tmp(2); tmp(9:2:end)];
 
-        % Save one file for each folder with FWHM data of all measures
+        % Creating data array
+        current(j) = tmp(3);
         bw_array(j) = calc_fwhm(wave, power, 1);
         bw_int_array(j) = calc_bandwidth_integrated(wave, power, 1);
         mean_wav_array(j) = calc_mean_wavelength(wave, power, 1);
@@ -58,6 +60,7 @@ for i = 1:length(acq)
     writematrix(bw_array,'fwhm_data.txt')
     writematrix(bw_int_array,'bandwidth_int_data.txt')
     writematrix(mean_wav_array,'mean_wavelength_data.txt')
+    writematrix(current,'current.txt')
 
 end
 toc
