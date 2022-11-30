@@ -3,7 +3,7 @@
 * Before running the program go to Tools/Options/Front panel and disable the option "Use localized decimal point*".
 Otherwise, LabVIEW will consider "," instead of "." depending on Windows language.
 
-This code (in LabVIEW 2018) is used to obtain a characterization of lasers diode, or superluminescent diodes, in terms of input current and output optical power.
+This code (in LabVIEW 2021) is used to obtain a characterization of lasers diode, or superluminescent diodes, in terms of input current and output optical power.
 With this characterization informations such as direct modulation, minimum lasing current, and power linearity can be obtained. Plus, every optical spectrum is saved in case more detail about the laser linewdith or SLD shape is needed.
 
 The communication is made via GPIB.
