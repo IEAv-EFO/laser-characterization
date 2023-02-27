@@ -19,8 +19,9 @@
 		</Item>
 		<Item Name="Automation.vi" Type="VI" URL="../VIs/Automation.vi"/>
 		<Item Name="Start Configuration.vi" Type="VI" URL="../VIs/Start Configuration.vi"/>
-		<Item Name="Read Spectrum and Save It.vi" Type="VI" URL="../VIs/Read Spectrum and Save It.vi"/>
-		<Item Name="Wait for spectrometer.vi" Type="VI" URL="../VIs/Wait for spectrometer.vi"/>
+		<Item Name="Read Spectrum and Save It_OK.vi" Type="VI" URL="../VIs/Read Spectrum and Save It_OK.vi"/>
+		<Item Name="Config Controller.vi" Type="VI" URL="../VIs/Config Controller.vi"/>
+		<Item Name="Config Spectrometer.vi" Type="VI" URL="../VIs/Config Spectrometer.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Stall Data Flow.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Stall Data Flow.vim"/>
@@ -284,17 +285,12 @@
 			<Item Name="End Sound.vi" Type="VI" URL="../VIs/End Sound.vi"/>
 			<Item Name="filename.vi" Type="VI" URL="../VIs/filename.vi"/>
 			<Item Name="save_metadata.vi" Type="VI" URL="../VIs/save_metadata.vi"/>
-			<Item Name="Read Spectrum and Save It_OK.vi" Type="VI" URL="../VIs/Read Spectrum and Save It_OK.vi"/>
 			<Item Name="hora min seg.vi" Type="VI" URL="../VIs/hora min seg.vi"/>
-			<Item Name="Config Spectrometer.vi" Type="VI" URL="../VIs/Config Spectrometer.vi"/>
-			<Item Name="Config Controller.vi" Type="VI" URL="../VIs/Config Controller.vi"/>
 			<Item Name="lvStorage.dll" Type="Document" URL="lvStorage.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="End Configuration.vi" Type="VI" URL="../VIs/End Configuration.vi"/>
-			<Item Name="Wait for spectrometer_v2.vi" Type="VI" URL="../VIs/Wait for spectrometer_v2.vi"/>
-			<Item Name="Read X.vi" Type="VI" URL="../VIs/Read X.vi"/>
-			<Item Name="Read Y.vi" Type="VI" URL="../VIs/Read Y.vi"/>
+			<Item Name="Wait for spectrometer.vi" Type="VI" URL="../VIs/Wait for spectrometer.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
