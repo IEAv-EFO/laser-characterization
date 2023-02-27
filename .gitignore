@@ -1,8 +1,8 @@
 *.ini
 
 # Libraries
-*.lvlibp
-*.llb
+#*.lvlibp
+#*.llb
 
 # Shared objects (inc. Windows DLLs)
 *.dll
