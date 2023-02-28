@@ -20,11 +20,21 @@ acq_ind = [acq.isdir]; % logic to array
 acq = acq(acq_ind);
 acq = strcat({acq.name},'\') ; % to cell array
 
+% check if folder is data folder itself
+if isempty(acq) == 1
+    acq = 1;
+end
+
 tic
 % for loop to access each folder
 for i = 1:length(acq)
     fprintf(['folder ',num2str(i),'\n\n'])
-    cd([path,'\',acq{i}])
+    
+    if acq == 1
+        cd(path)
+    else
+        cd([path,'\',acq{i}])
+    end
     
     % check if there are files inside folder
     n = length(dir([file_name_pattern,'*']));
