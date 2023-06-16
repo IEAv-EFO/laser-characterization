@@ -1,4 +1,4 @@
-# Laser Diode Characterization
+# Spectrum Characterization
 
 * Before running the program go to Tools/Options/Front panel and disable the option "Use localized decimal point*".
 Otherwise, LabVIEW will consider "," instead of "." depending on Windows language.
