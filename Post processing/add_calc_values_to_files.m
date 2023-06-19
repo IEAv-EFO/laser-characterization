@@ -43,11 +43,8 @@ for i = 1:length(acq)
     end   
     
     % Initializing variables
-    bw_array = zeros(n,1);
-    bw_int_array = zeros(n,1);
-    mean_wav_array = zeros(n,1);
-    current = zeros(n,1);
-
+    calculated_data = zeros(n,5);
+        
     % for loop to access each spectrum
     for j = 1:n
         fprintf(['\tspectrum ',num2str(j),'\n'])
@@ -56,21 +53,26 @@ for i = 1:length(acq)
         tmp = fscanf(fid,'%f');
         fclose(fid);
 
-        power = [tmp(1); tmp(8:2:end)];
-        wave = [tmp(2); tmp(9:2:end)];
+        power_raw = [tmp(1); tmp(8:2:end)];
+        wave_raw = [tmp(2); tmp(9:2:end)];
 
         % Creating data array
-        current(j) = tmp(3);
-        bw_array(j) = calc_fwhm(wave, power, 1);
-        bw_int_array(j) = calc_bandwidth_integrated(wave, power, 1);
-        mean_wav_array(j) = calc_mean_wavelength(wave, power, 1);
+        [wave, power] = normalize_osa(wave_raw, power_raw);
+        power = dbm2mw(power);
         
-    end
+        calculated_data(j,:) = [calc_power(wave, power),...
+               calc_fwhm(wave, power, 0),...
+               calc_bandwidth_integrated(wave, power),...
+               calc_mean_wavelength(wave, power),...
+               tmp(3)];
 
-    writematrix(bw_array,'fwhm_data.txt')
-    writematrix(bw_int_array,'bandwidth_int_data.txt')
-    writematrix(mean_wav_array,'mean_wavelength_data.txt')
-    writematrix(current,'current.txt')
+    end
+    
+    % Save calculated values and metadata
+    metadata = {'Integrated Power' 'FWHM' 'Integrated bandwidth'...
+        'Mean wavelength' 'Pump Current ILX'};
+    output = [metadata; num2cell(calculated_data)];
+    writecell(output, 'calculated_data.csv')    
 
 end
 toc
