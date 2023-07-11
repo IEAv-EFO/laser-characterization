@@ -22,6 +22,7 @@
 		<Item Name="Read Spectrum and Save It_OK.vi" Type="VI" URL="../VIs/Read Spectrum and Save It_OK.vi"/>
 		<Item Name="Config Controller.vi" Type="VI" URL="../VIs/Config Controller.vi"/>
 		<Item Name="Config Spectrometer.vi" Type="VI" URL="../VIs/Config Spectrometer.vi"/>
+		<Item Name="Read Spectrum Continuously.vi" Type="VI" URL="../VIs/Read Spectrum Continuously.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Stall Data Flow.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Stall Data Flow.vim"/>
