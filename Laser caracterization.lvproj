@@ -11,18 +11,14 @@
 		<Property Name="server.vi.callsEnabled" Type="Bool">true</Property>
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
-		<Item Name="LDC3722B_lib" Type="Folder" URL="../LDC3722B_lib">
-			<Property Name="NI.DISK" Type="Bool">true</Property>
-		</Item>
 		<Item Name="AVQ8347_lib" Type="Folder" URL="../AVQ8347_lib">
 			<Property Name="NI.DISK" Type="Bool">true</Property>
 		</Item>
-		<Item Name="Automation.vi" Type="VI" URL="../VIs/Automation.vi"/>
-		<Item Name="Start Configuration.vi" Type="VI" URL="../VIs/Start Configuration.vi"/>
-		<Item Name="Read Spectrum and Save It_OK.vi" Type="VI" URL="../VIs/Read Spectrum and Save It_OK.vi"/>
-		<Item Name="Config Controller.vi" Type="VI" URL="../VIs/Config Controller.vi"/>
-		<Item Name="Config Spectrometer.vi" Type="VI" URL="../VIs/Config Spectrometer.vi"/>
 		<Item Name="Read Spectrum Continuously.vi" Type="VI" URL="../VIs/Read Spectrum Continuously.vi"/>
+		<Item Name="Start Configuration.vi" Type="VI" URL="../VIs/Start Configuration.vi"/>
+		<Item Name="Read Spectrum.vi" Type="VI" URL="../VIs/Read Spectrum.vi"/>
+		<Item Name="Config Spectrometer.vi" Type="VI" URL="../VIs/Config Spectrometer.vi"/>
+		<Item Name="Spectrum file name.vi" Type="VI" URL="../VIs/Spectrum file name.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Stall Data Flow.vim" Type="VI" URL="/&lt;vilib&gt;/Utility/Stall Data Flow.vim"/>
@@ -284,7 +280,6 @@
 				<Item Name="High Resolution Relative Seconds.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/High Resolution Relative Seconds.vi"/>
 			</Item>
 			<Item Name="End Sound.vi" Type="VI" URL="../VIs/End Sound.vi"/>
-			<Item Name="filename.vi" Type="VI" URL="../VIs/filename.vi"/>
 			<Item Name="save_metadata.vi" Type="VI" URL="../VIs/save_metadata.vi"/>
 			<Item Name="hora min seg.vi" Type="VI" URL="../VIs/hora min seg.vi"/>
 			<Item Name="lvStorage.dll" Type="Document" URL="lvStorage.dll">
